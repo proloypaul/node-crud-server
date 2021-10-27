@@ -86,6 +86,34 @@ app.get('/', (req, res) => {
     res.send("Here is my backend web")
 });
 
+app.get('/hellow', (req, res) => {
+  res.send("Hey there i already deploy my server")
+})
 app.listen(port, (req, res) => {
     console.log("Running server  on port", port)
 });
+
+
+/*
+deploy server to heroku
+
+one time 
+1.Heroku account open
+2.heroku software install
+
+Every project
+1.git init
+2. .gitignore(node_module, .env)
+3. push evry thing to git
+4.make sure you have this script: "start":"node index.js"
+5.make sure process.env.PORT in front of your port number
+6.heroku login
+7.heroku create (only one time)
+8. git push heroku main
+
+
+update deploy link 
+1. git add . , git commit -m "", git push
+2. git push heroku main
+
+*/
